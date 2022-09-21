@@ -21,7 +21,7 @@
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label for="">Name</label>
+                                <label for="">Contact</label>
                                 <input type="text" name="contact" class="form-control">
                             </div>
                             <div class="mb-3">
