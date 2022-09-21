@@ -25,32 +25,38 @@
                                 <input type="text" name="contact" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <input type="submit"  class="btn btn-danger">
+                                <input type="submit"  class="btn btn-danger bg-danger">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-7">
-                <div class="table">
+                
+            <table class="table">
+                <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>contact</th>
-                        <th>status</th>
-                        <th>action</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
                     </tr>
+                </thead>
+                <tbody>
                     @foreach ($vcard as $item)
-                        <tr>
-                            <td>{{$item->id}}</td>
-                            <td>{{$item->name}}</td>
-                            <td>{{$item->contact}}</td>
-                            <td>{{$item->status}}</td>
-                            <td>
-                                <a href="" class="btn btn-danger">X</a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </div>
+                    <tr>
+                        <td>{{$item->id}}</td>
+                        <td>{{$item->name}}</td>
+                        <td>{{$item->contact}}</td>
+                        <td>{{$item->status}}</td>
+                        <td>
+                            <a href="" class="btn btn-danger">X</a>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
             </div>
         </div>
     </div>
