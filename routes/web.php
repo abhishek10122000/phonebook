@@ -17,3 +17,9 @@ use App\Http\Controllers\VcardController;
 //     return view('welcome');
 // });
 Route::match(['get', 'post'], '/',[VcardController::class,"home"])->name("home");
+Route::match(['get', 'post'], '/search',[VcardController::class,"search"])->name("search");
+Route::get('/edit/{id}',[VcardController::class,"edit"])->name("edit");
+Route::put('/update/{id}',[VcardController::class,"update"])->name("update");
+Route::get('/delete/{id}',[VcardController::class,"dis"])->name('delete');
+
+
